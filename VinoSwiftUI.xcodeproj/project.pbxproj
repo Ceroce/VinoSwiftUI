@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFD0FE6E245973470038CD91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0FE6D245973470038CD91 /* AppDelegate.swift */; };
+		DFD0FE70245973470038CD91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0FE6F245973470038CD91 /* SceneDelegate.swift */; };
+		DFD0FE72245973470038CD91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0FE71245973470038CD91 /* ContentView.swift */; };
+		DFD0FE74245973490038CD91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD0FE73245973490038CD91 /* Assets.xcassets */; };
+		DFD0FE77245973490038CD91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD0FE76245973490038CD91 /* Preview Assets.xcassets */; };
+		DFD0FE7A245973490038CD91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD0FE78245973490038CD91 /* LaunchScreen.storyboard */; };
+		DFD0FE85245973490038CD91 /* VinoSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0FE84245973490038CD91 /* VinoSwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFD0FE81245973490038CD91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFD0FE62245973470038CD91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFD0FE69245973470038CD91;
+			remoteInfo = VinoSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFD0FE6A245973470038CD91 /* VinoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD0FE6D245973470038CD91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFD0FE6F245973470038CD91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DFD0FE71245973470038CD91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DFD0FE73245973490038CD91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFD0FE76245973490038CD91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFD0FE79245973490038CD91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFD0FE7B245973490038CD91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD0FE80245973490038CD91 /* VinoSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinoSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD0FE84245973490038CD91 /* VinoSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinoSwiftUITests.swift; sourceTree = "<group>"; };
+		DFD0FE86245973490038CD91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFD0FE67245973470038CD91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD0FE7D245973490038CD91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFD0FE61245973470038CD91 = {
+			isa = PBXGroup;
+			children = (
+				DFD0FE6C245973470038CD91 /* VinoSwiftUI */,
+				DFD0FE83245973490038CD91 /* VinoSwiftUITests */,
+				DFD0FE6B245973470038CD91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFD0FE6B245973470038CD91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFD0FE6A245973470038CD91 /* VinoSwiftUI.app */,
+				DFD0FE80245973490038CD91 /* VinoSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFD0FE6C245973470038CD91 /* VinoSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				DFD0FE6D245973470038CD91 /* AppDelegate.swift */,
+				DFD0FE6F245973470038CD91 /* SceneDelegate.swift */,
+				DFD0FE71245973470038CD91 /* ContentView.swift */,
+				DFD0FE73245973490038CD91 /* Assets.xcassets */,
+				DFD0FE78245973490038CD91 /* LaunchScreen.storyboard */,
+				DFD0FE7B245973490038CD91 /* Info.plist */,
+				DFD0FE75245973490038CD91 /* Preview Content */,
+			);
+			path = VinoSwiftUI;
+			sourceTree = "<group>";
+		};
+		DFD0FE75245973490038CD91 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DFD0FE76245973490038CD91 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DFD0FE83245973490038CD91 /* VinoSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFD0FE84245973490038CD91 /* VinoSwiftUITests.swift */,
+				DFD0FE86245973490038CD91 /* Info.plist */,
+			);
+			path = VinoSwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFD0FE69245973470038CD91 /* VinoSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFD0FE89245973490038CD91 /* Build configuration list for PBXNativeTarget "VinoSwiftUI" */;
+			buildPhases = (
+				DFD0FE66245973470038CD91 /* Sources */,
+				DFD0FE67245973470038CD91 /* Frameworks */,
+				DFD0FE68245973470038CD91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VinoSwiftUI;
+			productName = VinoSwiftUI;
+			productReference = DFD0FE6A245973470038CD91 /* VinoSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFD0FE7F245973490038CD91 /* VinoSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFD0FE8C245973490038CD91 /* Build configuration list for PBXNativeTarget "VinoSwiftUITests" */;
+			buildPhases = (
+				DFD0FE7C245973490038CD91 /* Sources */,
+				DFD0FE7D245973490038CD91 /* Frameworks */,
+				DFD0FE7E245973490038CD91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFD0FE82245973490038CD91 /* PBXTargetDependency */,
+			);
+			name = VinoSwiftUITests;
+			productName = VinoSwiftUITests;
+			productReference = DFD0FE80245973490038CD91 /* VinoSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFD0FE62245973470038CD91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Céroce";
+				TargetAttributes = {
+					DFD0FE69245973470038CD91 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					DFD0FE7F245973490038CD91 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = DFD0FE69245973470038CD91;
+					};
+				};
+			};
+			buildConfigurationList = DFD0FE65245973470038CD91 /* Build configuration list for PBXProject "VinoSwiftUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFD0FE61245973470038CD91;
+			productRefGroup = DFD0FE6B245973470038CD91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFD0FE69245973470038CD91 /* VinoSwiftUI */,
+				DFD0FE7F245973490038CD91 /* VinoSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFD0FE68245973470038CD91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD0FE7A245973490038CD91 /* LaunchScreen.storyboard in Resources */,
+				DFD0FE77245973490038CD91 /* Preview Assets.xcassets in Resources */,
+				DFD0FE74245973490038CD91 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD0FE7E245973490038CD91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFD0FE66245973470038CD91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD0FE6E245973470038CD91 /* AppDelegate.swift in Sources */,
+				DFD0FE70245973470038CD91 /* SceneDelegate.swift in Sources */,
+				DFD0FE72245973470038CD91 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD0FE7C245973490038CD91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD0FE85245973490038CD91 /* VinoSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFD0FE82245973490038CD91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFD0FE69245973470038CD91 /* VinoSwiftUI */;
+			targetProxy = DFD0FE81245973490038CD91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFD0FE78245973490038CD91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFD0FE79245973490038CD91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFD0FE87245973490038CD91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFD0FE88245973490038CD91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFD0FE8A245973490038CD91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"VinoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = JS2NP7LTML;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = VinoSwiftUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceroce.VinoSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFD0FE8B245973490038CD91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"VinoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = JS2NP7LTML;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = VinoSwiftUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceroce.VinoSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DFD0FE8D245973490038CD91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JS2NP7LTML;
+				INFOPLIST_FILE = VinoSwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceroce.VinoSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VinoSwiftUI.app/VinoSwiftUI";
+			};
+			name = Debug;
+		};
+		DFD0FE8E245973490038CD91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JS2NP7LTML;
+				INFOPLIST_FILE = VinoSwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceroce.VinoSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VinoSwiftUI.app/VinoSwiftUI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFD0FE65245973470038CD91 /* Build configuration list for PBXProject "VinoSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD0FE87245973490038CD91 /* Debug */,
+				DFD0FE88245973490038CD91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFD0FE89245973490038CD91 /* Build configuration list for PBXNativeTarget "VinoSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD0FE8A245973490038CD91 /* Debug */,
+				DFD0FE8B245973490038CD91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFD0FE8C245973490038CD91 /* Build configuration list for PBXNativeTarget "VinoSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD0FE8D245973490038CD91 /* Debug */,
+				DFD0FE8E245973490038CD91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFD0FE62245973470038CD91 /* Project object */;
+}
