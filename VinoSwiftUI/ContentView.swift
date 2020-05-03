@@ -32,7 +32,8 @@ struct Rack: View {
     let bottleCount: Count2D
     let bottleSize = CGSize(width: 44, height: 44)
     var body: some View {
-        let unframedSize = UnframedRack.size(bottleCount: bottleCount, bottleSize: bottleSize)
+        let unframedRackProto = UnframedRack(bottleCount: bottleCount, bottleSize: bottleSize)
+        let unframedSize = unframedRackProto.size
         let width = unframedSize.width + 2*VerticalBoard.width
         return VStack(spacing: 0) {
             HorizontalBoard(width: width)
@@ -50,7 +51,8 @@ struct UnframedRack: View {
     let bottleCount: Count2D
     let bottleSize: CGSize
     var body: some View {
-        let rowWidth = Row.size(bottleCount: bottleCount.horizontal, bottleSize: bottleSize).width
+        let rowProto = Row(bottleCount: bottleCount.horizontal, bottleSize: bottleSize)
+        let rowWidth = rowProto.size.width
         return VStack(spacing: 0) {
             Row(bottleCount: bottleCount.horizontal, bottleSize: bottleSize)
             HorizontalSeparator(width: rowWidth)
@@ -60,10 +62,12 @@ struct UnframedRack: View {
         }
     }
     
-    static func size(bottleCount: Count2D, bottleSize: CGSize) -> CGSize {
-        let rowSize = Row.size(bottleCount: bottleCount.horizontal, bottleSize: bottleSize)
+    var size: CGSize {
+        let rowProto = Row(bottleCount: bottleCount.horizontal, bottleSize: bottleSize)
+        let rowSize = rowProto.size
+        let numberOfSeparators = bottleCount.vertical-1
         return CGSize(
-            width: rowSize.width, height: CGFloat(bottleCount.vertical)*rowSize.height + 2*HorizontalSeparator.height)
+            width: rowSize.width, height: CGFloat(bottleCount.vertical)*rowSize.height + CGFloat(numberOfSeparators)*HorizontalSeparator.height)
     }
 }
 
@@ -82,8 +86,9 @@ struct Row: View {
         }
     }
     
-    static func size(bottleCount: Int, bottleSize: CGSize) -> CGSize {
-        .init(width: CGFloat(bottleCount) * bottleSize.width + 3 * VerticalSeparator.width, height: bottleSize.height)
+    var size: CGSize {
+        let numberOfSeparators = bottleCount-1
+        return CGSize(width: CGFloat(bottleCount) * bottleSize.width + CGFloat(numberOfSeparators) * VerticalSeparator.width, height: bottleSize.height)
     }
 }
 
