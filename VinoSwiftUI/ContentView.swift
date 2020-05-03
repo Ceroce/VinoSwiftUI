@@ -12,16 +12,12 @@ struct ContentView: View {
     var body: some View {
         HStack {
             Spacer()
-//                .frame(height: 0.0)
             VStack {
                 Spacer()
-//                    .frame(width: 0.0)
                 Rack()
                 Spacer()
-//                    .frame(width: 0.0)
             }
             Spacer()
-//                .frame(height: 0.0)
         }
         
     }
@@ -30,21 +26,36 @@ struct ContentView: View {
 struct Rack: View {
     let bottleSize = CGSize(width: 44, height: 44)
     var body: some View {
-        VStack(spacing: 0) {
-            HorizontalBoard()
+        let unframedSize = UnframedRack.size(bottleSize: bottleSize)
+        let width = unframedSize.width + 2*VerticalBoard.width
+        return VStack(spacing: 0) {
+            HorizontalBoard(width: width)
             HStack(spacing: 0) {
-                VerticalBoard()
-                VStack(spacing: 0) {
-                    Row(bottleHoleSize: bottleSize)
-                    HorizontalSeparator()
-                    Row(bottleHoleSize: bottleSize)
-                    HorizontalSeparator()
-                    Row(bottleHoleSize: bottleSize)
-                }
-                VerticalBoard()
+                VerticalBoard(height: unframedSize.height)
+                UnframedRack(bottleSize: bottleSize)
+                VerticalBoard(height: unframedSize.height)
             }
-            HorizontalBoard()
+            HorizontalBoard(width: width)
         }
+    }
+}
+
+struct UnframedRack: View {
+    let bottleSize: CGSize
+    var body: some View {
+        let rowWidth = Row.size(bottleSize: bottleSize).width
+        return VStack(spacing: 0) {
+            Row(bottleHoleSize: bottleSize)
+            HorizontalSeparator(width: rowWidth)
+            Row(bottleHoleSize: bottleSize)
+            HorizontalSeparator(width: rowWidth)
+            Row(bottleHoleSize: bottleSize)
+        }
+    }
+    
+    static func size(bottleSize: CGSize) -> CGSize {
+        let rowSize = Row.size(bottleSize: bottleSize)
+        return CGSize(width: rowSize.width, height: 3*rowSize.height + 2*HorizontalSeparator.height)
     }
 }
 
@@ -61,6 +72,10 @@ struct Row: View {
             BottleHole(size: bottleHoleSize)
         }
     }
+    
+    static func size(bottleSize: CGSize) -> CGSize {
+        .init(width: 4 * bottleSize.width + 3 * VerticalSeparator.width, height: bottleSize.height)
+    }
 }
 
 struct BottleHole: View {
@@ -73,38 +88,41 @@ struct BottleHole: View {
 }
 
 struct HorizontalSeparator: View {
-    let height: CGFloat = 4
+    let width: CGFloat
+    static let height: CGFloat = 4
     var body: some View {
         Rectangle()
-            .frame(height: height, alignment: .center)
+            .frame(width: width, height: Self.height, alignment: .center)
         .foregroundColor(.red)
     }
 }
 
 struct VerticalSeparator: View {
     let height: CGFloat
-    let width: CGFloat = 4
+    static let width: CGFloat = 4
     var body: some View {
         Rectangle()
-            .frame(width: width, height: height, alignment: .center)
+            .frame(width: Self.width, height: height, alignment: .center)
         .foregroundColor(.purple)
     }
 }
 
 struct HorizontalBoard: View {
-    let height: CGFloat = 6
+    let width: CGFloat
+    static let height: CGFloat = 6
     var body: some View {
         Rectangle()
-            .frame(height: height, alignment: .center)
+            .frame(width: width, height: Self.height, alignment: .center)
         .foregroundColor(.yellow)
     }
 }
 
 struct VerticalBoard: View {
-    let width: CGFloat = 6
+    static let width: CGFloat = 6
+    let height: CGFloat
     var body: some View {
         Rectangle()
-            .frame(width: width, alignment: .center)
+            .frame(width: Self.width, height: height, alignment: .center)
             .foregroundColor(.green)
     }
 }
