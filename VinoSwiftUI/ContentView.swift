@@ -10,14 +10,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            Spacer()
-            VStack {
-                Spacer()
+        NavigationView {
+            ScrollView([.horizontal, .vertical]) {
                 Rack(bottleCount: .init(horizontal: 4, vertical: 3))
-                Spacer()
             }
-            Spacer()
+            .background(
+                Rectangle()
+                    .foregroundColor(.gray)
+            )
+            .navigationBarTitle(Text("Cellar 1"), displayMode: .automatic)
+            .navigationBarItems(trailing:
+                Button(action: {},
+                       label: {Text("Edit")}
+                )
+            )
         }
         
     }
