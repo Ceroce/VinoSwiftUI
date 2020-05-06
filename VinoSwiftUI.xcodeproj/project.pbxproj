@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF6BC1E72462A48E007B8D2E /* Array+joined.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6BC1E62462A48E007B8D2E /* Array+joined.swift */; };
 		DF6BC1E92462A990007B8D2E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6BC1E82462A990007B8D2E /* Model.swift */; };
+		DF6BC1EA2462E4BB007B8D2E /* Array+joined.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6BC1E62462A48E007B8D2E /* Array+joined.swift */; };
 		DFD0FE6E245973470038CD91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0FE6D245973470038CD91 /* AppDelegate.swift */; };
 		DFD0FE70245973470038CD91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0FE6F245973470038CD91 /* SceneDelegate.swift */; };
 		DFD0FE72245973470038CD91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0FE71245973470038CD91 /* ContentView.swift */; };
@@ -215,8 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6BC1E92462A990007B8D2E /* Model.swift in Sources */,
-				DF6BC1E72462A48E007B8D2E /* Array+joined.swift in Sources */,
 				DFD0FE6E245973470038CD91 /* AppDelegate.swift in Sources */,
+				DF6BC1EA2462E4BB007B8D2E /* Array+joined.swift in Sources */,
 				DFD0FE70245973470038CD91 /* SceneDelegate.swift in Sources */,
 				DFD0FE72245973470038CD91 /* ContentView.swift in Sources */,
 			);

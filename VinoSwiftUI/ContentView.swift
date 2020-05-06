@@ -80,15 +80,40 @@ struct UnframedRack: View {
 struct Row: View {
     let bottleCount: Int
     let bottleSize: CGSize
+    
+    // We must pass through an intermediary representation!
+    struct Intermediary: Identifiable {
+        enum Kind {
+            case bottle
+            case separator
+        }
+        let id = UUID()
+        let kind: Kind
+    }
+    
+    var bottles: [Bottle] {
+        Array<Bottle>(repeatElement(Bottle(), count: bottleCount))
+    }
+    
+    var intermediaries: AnyRandomAccessCollection<Intermediary> {
+        AnyRandomAccessCollection(
+            bottles.lazy.flatMap { _ in
+                [Intermediary(kind: .bottle), Intermediary(kind: .separator)]
+            }
+            .dropLast()
+        )
+    }
+    
     var body: some View {
         HStack(spacing: 0.0) {
-            BottleHole(size: bottleSize)
-            VerticalSeparator(height: bottleSize.height)
-            BottleHole(size: bottleSize)
-            VerticalSeparator(height: bottleSize.height)
-            BottleHole(size: bottleSize)
-            VerticalSeparator(height: bottleSize.height)
-            BottleHole(size: bottleSize)
+            ForEach(intermediaries) { interm in
+                // If…else works, but not switch…case !
+                if interm.kind == .bottle {
+                    BottleHole(size: self.bottleSize)
+                } else {
+                    VerticalSeparator(height: self.bottleSize.height)
+                }
+            }
         }
     }
     
