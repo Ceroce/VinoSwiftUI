@@ -12,13 +12,12 @@ import SwiftUI
 
 struct RackView: View {
     let bottleCount: Count2D
-    let bottleSize = CGSize(width: 44, height: 44)
     var body: some View {
         VStack(spacing: 0) {
             HorizontalBoardView()
             HStack(spacing: 0) {
                 VerticalBoardView()
-                UnframedRackView(bottleCount: bottleCount, bottleSize: bottleSize)
+                UnframedRackView(bottleCount: bottleCount)
                 VerticalBoardView()
             }
             HorizontalBoardView()
@@ -28,22 +27,20 @@ struct RackView: View {
 
 struct UnframedRackView: View {
     let bottleCount: Count2D
-    let bottleSize: CGSize
     
     var body: some View {
         VStack(spacing: 0) {
-            RowView(bottleCount: bottleCount.horizontal, bottleSize: bottleSize)
+            RowView(bottleCount: bottleCount.horizontal)
             HorizontalSeparatorView()
-            RowView(bottleCount: bottleCount.horizontal, bottleSize: bottleSize)
+            RowView(bottleCount: bottleCount.horizontal)
             HorizontalSeparatorView()
-            RowView(bottleCount: bottleCount.horizontal, bottleSize: bottleSize)
+            RowView(bottleCount: bottleCount.horizontal)
         }
     }
 }
 
 struct RowView: View {
     let bottleCount: Int
-    let bottleSize: CGSize
     
     // We must pass through an intermediary representation!
     struct Intermediary: Identifiable {
@@ -73,9 +70,9 @@ struct RowView: View {
             ForEach(intermediaries) { interm in
                 // If…else works, but not switch…case !
                 if interm.kind == .bottle {
-                    BottleHoleView(size: self.bottleSize)
+                    BottleHoleView()
                 } else {
-                    VerticalSeparatorView(height: self.bottleSize.height)
+                    VerticalSeparatorView()
                 }
             }
         }
@@ -83,10 +80,9 @@ struct RowView: View {
 }
 
 struct BottleHoleView: View {
-    let size: CGSize
     var body: some View {
         Rectangle()
-            .frame(width: size.width, height: size.height, alignment: .center)
+            .frame(width: 44, height: 44, alignment: .center)
             .foregroundColor(Color(UIColor(red: 0, green: 0, blue: 1, alpha: 0.3)))
     }
 }
@@ -95,17 +91,15 @@ struct HorizontalSeparatorView: View {
     var body: some View {
         Rectangle()
             .frame(height: 4, alignment: .center)
-        .foregroundColor(.red)
+            .foregroundColor(.red)
     }
 }
 
 struct VerticalSeparatorView: View {
-    let height: CGFloat
-    static let width: CGFloat = 4
     var body: some View {
         Rectangle()
-            .frame(width: Self.width, height: height, alignment: .center)
-        .foregroundColor(.purple)
+            .frame(width: 4, alignment: .center)
+            .foregroundColor(.purple)
     }
 }
 
