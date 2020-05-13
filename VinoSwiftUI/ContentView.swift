@@ -9,10 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    let rack: Rack
     var body: some View {
         NavigationView {
             ScrollView([.horizontal, .vertical]) {
-                RackView(bottleCount: .init(horizontal: 4, vertical: 3))
+                RackView(rack: rack)
             }
             .background(
                 Rectangle()
@@ -35,6 +36,6 @@ struct Count2D {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(rack: Rack(capacity: .init(horizontal: 5, vertical: 7)))
     }
 }

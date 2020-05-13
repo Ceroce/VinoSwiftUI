@@ -9,5 +9,11 @@
 import Foundation
 
 struct Bottle: Identifiable {
+    enum Color {
+        case red
+        case rosy
+        case white
+    }
+    
     let id = UUID()
 }

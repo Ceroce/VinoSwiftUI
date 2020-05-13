@@ -11,13 +11,13 @@ import SwiftUI
 
 
 struct RackView: View {
-    let bottleCount: Count2D
+    let rack: Rack
     var body: some View {
         VStack(spacing: 0) {
             HorizontalBoardView()
             HStack(spacing: 0) {
                 VerticalBoardView()
-                UnframedRackView(bottleCount: bottleCount)
+                UnframedRackView(rack: rack)
                 VerticalBoardView()
             }
             HorizontalBoardView()
@@ -26,21 +26,48 @@ struct RackView: View {
 }
 
 struct UnframedRackView: View {
-    let bottleCount: Count2D
+    let rack: Rack
+    
+    struct Intermediary: Identifiable {
+        enum Kind {
+            case row ([Bottle?])
+            case separator
+        }
+        let id = UUID()
+        let kind: Kind
+        
+        var row: [Bottle?]? {
+            switch self.kind {
+            case .row (let bottles):
+                return bottles
+            case .separator:
+                return nil
+            }
+        }
+    }
+    
+    var intermediaries: AnyRandomAccessCollection<Intermediary> {
+        AnyRandomAccessCollection(
+            rack.bottlesAsRows.map { Intermediary(kind: .row(Array($0))) }
+                .joined(by: Intermediary(kind: .separator))
+        )
+    }
     
     var body: some View {
-        VStack(spacing: 0) {
-            RowView(bottleCount: bottleCount.horizontal)
-            HorizontalSeparatorView()
-            RowView(bottleCount: bottleCount.horizontal)
-            HorizontalSeparatorView()
-            RowView(bottleCount: bottleCount.horizontal)
+        return VStack(spacing: 0) {
+            ForEach(intermediaries) { interm in
+                if interm.row != nil {
+                    RowView(bottles: interm.row!)
+                } else {
+                    HorizontalSeparatorView()
+                }
+            }
         }
     }
 }
 
 struct RowView: View {
-    let bottleCount: Int
+    let bottles: [Bottle?]
     
     // We must pass through an intermediary representation!
     struct Intermediary: Identifiable {
@@ -50,10 +77,6 @@ struct RowView: View {
         }
         let id = UUID()
         let kind: Kind
-    }
-    
-    var bottles: [Bottle] {
-        Array<Bottle>(repeatElement(Bottle(), count: bottleCount))
     }
     
     var intermediaries: AnyRandomAccessCollection<Intermediary> {
@@ -66,7 +89,7 @@ struct RowView: View {
     }
     
     var body: some View {
-        HStack(spacing: 0.0) {
+        HStack(spacing: 0) {
             ForEach(intermediaries) { interm in
                 // If…else works, but not switch…case !
                 if interm.kind == .bottle {
@@ -122,7 +145,7 @@ struct VerticalBoardView: View {
 public enum RackViewPreview: PreviewProvider {
     
     public static var previews: some View {
-        RackView(bottleCount: Count2D(horizontal: 4, vertical: 3))
+        RackView(rack: Rack(capacity: .init(horizontal: 6, vertical: 3)))
         .fixedSize()
     }
 }
